@@ -39,6 +39,29 @@ Please visit the **[vuesion app on heroku!](https://vuesion.herokuapp.com/)**
 
 <img width="761" alt="bildschirmfoto 2019-01-19 um 14 24 32" src="https://user-images.githubusercontent.com/1667598/51427252-00c00600-1bf6-11e9-9ab4-9f043226db35.png">
 
+### Benchmark (10-2019)
+
+- Device: iMac Pro (2017) 3,2 GHz Intel Xeon W 32 GB 2666 MHz DDR4
+- Browser: FireFox 68.0.1 (64-Bit)
+- Assessment: created applications - no additions of components, except of example templates from the material design libraries
+- Deployment: Production build on localhost
+- Conditions: applications where fully cached in incognito mode without any plugins enabled. Results are aggregated from 10 reloads off the start page `/`
+
+| Criteria                                   | Vue-CLI  | Vue-CLI + Vuetify | Nuxt      | Nuxt + Vuetify | Vuesion (SSR) | Vuesion (SPA) | create-react-app | create-react-app + material-ui | Angular-CLI | Angular-CLI + material | Next      | Next + material-ui |
+| ------------------------------------------ | -------- | ----------------- | --------- | -------------- | ------------- | ------------- | ---------------- | ------------------------------ | ----------- | ---------------------- | --------- | ------------------ |
+| Size                                       | 99,38 KB | 617,72 KB         | 241,10 KB | 1100 KB        | 466,84 KB     | 448,24 KB     | 138,55 KB        | 437,16 KB                      | 284,75 KB   | 442,83 KB              | 236,61 KB | 897,24 KB          |
+| Load time                                  | 370 ms   | 986 ms            | 163 ms    | 293ms          | 292 ms        | 321 ms        | 111 ms           | 322 ms                         | 148 ms      | 152 ms                 | 121 ms    | 502 ms             |
+| Router                                     | x        | x                 | x         | x              | x             | x             |                  |                                | x           | x                      | x         | x                  |
+| State management                           | x        | x                 |           |                | x             | x             |                  |                                |             |                        |           |                    |
+| State persisting                           |          |                   |           |                | x             | x             |                  |                                |             |                        |           |                    |
+| i18n                                       |          |                   |           |                | x             | x             |                  |                                |             |                        |           |                    |
+| Form validation                            |          |                   |           |                | x             | x             |                  |                                | x           | x                      |           |                    |
+| Markdown renderer                          |          |                   |           |                | x             | x             |                  |                                |             |                        |           |                    |
+| Animations                                 | x        | x                 | x         | x              | x             | x             |                  |                                |             | x                      |           |                    |
+| Env. Config                                | x        | x                 | x         | x              | x             | x             | x                | x                              | x           | x                      | x         | x                  |
+| Feature Flags                              |          |                   |           |                | x             |               |                  |                                |             |                        |           |                    |
+| Time to create project w/o prev. knowledge | 2 m      | 7 m (without TS)  | 2 m       | 2 m            | -             | -             | 2 m              | 30 m                           | 2 m         | 13 m                   | 3 m       | 30 m               |
+
 # Getting started
 
 ## Via `npx`
